@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color"
+    tools:context=".View.WeatherHome">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/weather_home_loading_weather"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            android:id="@+id/weather_home_error_weather"
+            android:src="@drawable/ic_baseline_close_24"
+            android:layout_height="50dp"/>
+
+        <LinearLayout
+            android:padding="15dp"
+            android:id="@+id/weather_home_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/weather_home_province"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:text="Mountain Veiw"
+                    android:textAlignment="center"
+                    android:textSize="30sp" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".50" />
+
+                <TextView
+                    android:id="@+id/weather_home_weather_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Most , cloudy"
+                    android:textStyle="normal"
+                    android:textAlignment="textEnd"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/weather_home_country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:text="Country"
+                    android:textAlignment="center"
+                    android:textSize="30sp" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".50" />
+
+                <TextView
+                    android:id="@+id/weather_home_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:textAlignment="textEnd"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center|top"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/weather_home_weather_image"
+                        android:src="@drawable/ic_launcher_background" />
+
+                    <TextView
+                        android:id="@+id/weather_home_weather_status_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Sunny"
+                        android:textAlignment="center"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:id="@+id/weather_home_weather_status_temp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-1°C"
+                        android:textAlignment="center"
+                        android:textSize="50dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/weather_home_weather_wind"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="wind"
+                            android:textAlignment="center"
+                            android:textSize="30sp" />
+                        <ImageView
+                            android:id="@+id/weather_home_weather_wind_icon"
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/ic_baseline_arrow_upward_24"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/weather_home_user_coordination"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-122.08 , 37.39"
+                        android:textAlignment="center"
+                        android:textSize="30sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:id="@+id/weather_home_bottom_navigation_bar"
+            android:background="@color/background_color"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/weather_home_menu"
+            app:itemTextColor="#808080"
+            app:itemIconTint="#808080"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</FrameLayout>

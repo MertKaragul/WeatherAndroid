@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/weather_home">
+
+    <fragment
+        android:id="@+id/weather_home"
+        android:name="com.frag.weather.View.WeatherHome"
+        android:label="fragment_weather_home"
+        tools:layout="@layout/fragment_weather_home" >
+        <action
+            android:id="@+id/action_weather_home_to_searchWeather"
+            app:destination="@id/searchWeather" />
+        <action
+            android:id="@+id/action_weather_home_to_permissionFragment"
+            app:destination="@id/permissionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchWeather"
+        android:name="com.frag.weather.View.SearchWeather"
+        android:label="fragment_search_weather"
+        tools:layout="@layout/fragment_search_weather" />
+    <fragment
+        android:id="@+id/permissionFragment"
+        android:name="com.frag.weather.View.PermissionFragment"
+        android:label="fragment_permission"
+        tools:layout="@layout/fragment_permission" >
+        <action
+            android:id="@+id/action_permissionFragment_to_weather_home"
+            app:destination="@id/weather_home" />
+    </fragment>
+</navigation>

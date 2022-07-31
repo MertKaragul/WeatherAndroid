@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="permission_warning_text">We see that you did not provide the necessary permissions. If you provide us with the permissions, you will be able to use the application.</string>
+</resources>
