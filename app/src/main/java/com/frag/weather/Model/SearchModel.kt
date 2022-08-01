@@ -1,7 +1,7 @@
 package com.frag.weather.Model
 
 
-data class SearchModel(
+data class  SearchModel(
     val coord : Coord,
     val weather : List<Weather>,
     val main : Main,

@@ -25,7 +25,7 @@ data class Main(
     val humidity : Int?,
 )
 
-data class Weather(
+data class  Weather(
     val id : Int,
     val main : String,
     val description : String,

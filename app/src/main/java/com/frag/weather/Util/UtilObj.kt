@@ -7,6 +7,6 @@ import java.util.*
 
 object UtilObj {
     private val dateFormat = LocalDate.now()
-    val API_KEY = "3c7c7fa5da2ec76d599bae0fca61d1af"
+    val API_KEY = ""
     val getCurrentDate = DateTimeFormatter.ofPattern("dd-MM-yyyy").format(dateFormat)
 }

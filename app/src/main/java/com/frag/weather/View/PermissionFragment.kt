@@ -32,7 +32,7 @@ class PermissionFragment : Fragment(R.layout.fragment_permission) {
 
         val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-        val uri = Uri.fromParts("package" , this.context?.applicationContext?.packageName , null)
+        val uri = Uri.fromParts("package", this.context?.applicationContext?.packageName, null)
         intent.setData(uri)
         view.findViewById<Button>(R.id.permission_fragment_button).setOnClickListener {
             startActivity(intent)

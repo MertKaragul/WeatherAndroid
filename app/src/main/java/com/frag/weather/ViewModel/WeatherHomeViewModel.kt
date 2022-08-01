@@ -34,7 +34,7 @@ class WeatherHomeViewModel @Inject constructor(private val retrofit : Retrofit) 
 
     fun getWeather(latitude : String , longitude : String){
         disposable.add(
-            retrofit.create<RetrofitInterfaces>()
+            retrofit.create<Retr   ofitInterfaces>()
                 .getOneCall(latitude.toString() , longitude.toString(), "3c7c7fa5da2ec76d599bae0fca61d1af" , "metric")
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
